@@ -103,6 +103,10 @@ h2 {
   font-size: 1.4em;
 }
 
+main p {
+  fontfamily: 'Verdana', sans-serif;
+}
+
 #hero {
   background: linear-gradient(to right, var(--fundoescuro), var(--textoforte) 80%);
   color: var(--textoclaro);
