@@ -493,6 +493,11 @@ footer p.dev a:hover {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 6px;
+  }
+
+  .testemunho p {
+    margin-right: 10px;
   }
 
   .testemunho > div {
