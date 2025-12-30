@@ -1,0 +1,349 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --corprincimpal: #f2a900;
+  --textoforte: #4a2c0a;
+  --fundoprincimpal: #fff6e5;
+  --fundosecundario: #ffd966;
+  --areaderespiro: #ffffff;
+  --textosecundario: #343a3a;
+}
+
+header {
+  background-color: var(--areaderespiro);
+}
+
+header a:hover {
+  background-color: var(--fundosecundario);
+  color: var(--textoforte);
+  border-radius: 0.4em;
+}
+
+.header-container {
+  max-width: 75em;
+  margin: 0 auto;
+  padding: 1em 1.5em;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.logo {
+  max-width: 3em;
+  height: auto;
+}
+
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+  color: var(--textoforte);
+}
+
+nav {
+  display: flex;
+  gap: 1em;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 0.9em;
+  color: var(--textosecundario);
+  padding: 10px;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  background-color: var(--fundoprincimpal);
+  color: var(--textoforte);
+  line-height: 1.6;
+}
+
+main {
+  max-width: 75em;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+#hero {
+  background-color: var(--fundosecundario);
+  padding: 3em 1.5em;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.hero-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.hero-texto h1 {
+  font-size: 2em;
+}
+
+.hero-texto p {
+  max-width: 35em;
+  font-size: 1em;
+  color: var(--textosecundario);
+}
+
+.btn-hero {
+  align-self: flex-start;
+  padding: 0.8em 1.4em;
+  background-color: var(--corprincimpal);
+  color: var(--textoforte);
+  text-decoration: none;
+  border-radius: 0.6em;
+  font-weight: bold;
+}
+
+.hero-imagem img {
+  width: 100%;
+  border-radius: 1em;
+  object-fit: cover;
+}
+
+/* seção */
+#beneficios {
+  padding: 2em 1.5em;
+  background-color: var(--fundoprincimpal);
+}
+
+/* container dos cards */
+.beneficios-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+/* card */
+.beneficio {
+  background-color: var(--areaderespiro);
+  padding: 1.5em;
+  border-radius: 0.8em;
+  box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.08);
+}
+
+/* títulos */
+.beneficio h3 {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+/* texto */
+.beneficio p {
+  font-size: 0.95em;
+  color: var(--textosecundario);
+  line-height: 1.5;
+}
+
+.products {
+  display: flex; 
+  flex-direction: column;
+  gap: 2em;
+  padding: 2em 1.5em;
+}
+
+.product-card {
+  background-color: var(--areaderespiro);
+  border-radius: 0.8em;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.6em;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-size: 1.2em;
+}
+
+.product-card p {
+  font-size: 0.95em;
+}
+
+.btn-produto {
+  margin-top: auto;
+  padding: 0.8em;
+  text-align: center;
+  background-color: var(--corprincimpal);
+  color: var(--textoforte);
+  border-radius: 0.5em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-hero:hover {
+  background-color: var(--textoforte);
+  color: var(--fundoprincimpal);
+}
+
+.btn-produto:hover {
+  background-color: var(--fundosecundario);
+  color: var(--textoforte);
+}
+
+#formulario {
+  padding: 3em 1.5em;
+  background-color: var(--areaderespiro);
+}
+
+#formulario h2 {
+  margin-bottom: 1em;
+}
+
+#formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+#formulario label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  gap: 0.3em;
+}
+
+#formulario input {
+  padding: 0.8em;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.4em;
+}
+
+#formulario input:focus {
+  outline: none;
+  border-color: var(--corprincimpal);
+}
+
+#formulario button {
+  padding: 1em;
+  font-size: 1em;
+  background-color: var(--corprincimpal);
+  color: var(--textoforte);
+  border: none;
+  border-radius: 0.5em;
+  font-weight: bold;
+}
+
+#formulario button:hover {
+  cursor: pointer;
+  background-color: var(--fundosecundario);
+  color: var(--textoforte);
+}
+
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav a {
+    font-size: 1em;
+  }
+
+  section#hero {
+    min-height: 70vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hero-texto {
+    flex: 1;
+  }
+
+  .hero-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-imagem img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .products {
+    flex-direction: row;
+    justify-content: space-between;
+}
+  
+  #beneficios article, .product-card {
+    flex: 1;
+  }
+  
+  .beneficios-lista {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .beneficio {
+    flex: 1;
+  }
+
+  h1 {
+    font-size: 2.4em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .products {
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+
+  .product-card {
+    max-width: 18em;
+  }
+
+  .product-card:hover {
+    transform: translateY(-0.2em);
+    transition: transform 0.2s ease;
+  }
+
+  #formulario {
+    max-width: 30em;
+  }
+}
