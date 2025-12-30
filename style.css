@@ -216,6 +216,57 @@ h2 {
   color: var(--textoforte);
 }
 
+#avaliacoes {
+  padding: 40px 15px;
+  background-color: var(--fundoprincimpal);
+}
+
+#provasocial {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#provasocial img {
+  width: 80px;
+  height: 80px;
+  margin-right: 12px;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.testemunho {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background-color: var(--areaderespiro);
+}
+
+.testemunho p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.testemunho span {
+  font-weight: 700;
+  font-size: 0.9em;
+  color: var(--textoforte);
+}
+
+.testemunho > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--fundoprincimpal);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
 #formulario {
   padding: 3em 1.5em;
   background-color: var(--areaderespiro);
@@ -281,7 +332,9 @@ h2 {
     min-height: 70vh;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    padding: 80px 10%;
+    min-height: 80vh;
+    gap: 50px;
   }
 
   .hero-texto {
@@ -343,7 +396,26 @@ h2 {
     transition: transform 0.2s ease;
   }
 
-  #formulario {
-    max-width: 30em;
+  .testemunho {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .testemunho > div {
+    flex: 1 1 calc(25% - 20px);
+    min-width: 250px;
+  }
+
+  #formulario h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #formulario form {
+    max-width:500px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-radius: 12px;
   }
 }
