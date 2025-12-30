@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Dancing script';
+  src: url('fontes/Dancing_Script/DancingScript-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --corprincimpal: #f2a900;
   --textoforte: #4a2c0a;
@@ -48,8 +56,8 @@ header a:hover {
 }
 
 .brand-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2em;
+  font-family: 'Dancing script', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', serif;
+  font-size: 1.8em;
   color: var(--textoforte);
 }
 
@@ -77,8 +85,13 @@ main {
   margin: 0 auto;
 }
 
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+h1 {
+  font-family: 'Dancing script', sans-serif;
+  margin-bottom: 1em;
+}
+
+h2, h3 {
+  font-family: 'Playfair Display', sans-serif;
   margin-bottom: 1em;
 }
 
@@ -157,12 +170,14 @@ h2 {
   padding: 1.5em;
   border-radius: 0.8em;
   box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
 }
 
 /* títulos */
 .beneficio h3 {
   font-size: 1.2em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.4em;
 }
 
 /* texto */
@@ -170,6 +185,11 @@ h2 {
   font-size: 0.95em;
   color: var(--textosecundario);
   line-height: 1.5;
+}
+
+.beneficio img {
+  width: 2em;
+  margin-top: 1em;
 }
 
 .products {
@@ -217,8 +237,8 @@ h2 {
 }
 
 .btn-produto:hover {
-  background-color: var(--fundosecundario);
-  color: var(--textoforte);
+  background-color: var(--textoforte);
+  color: var(--textoclaro);
 }
 
 #avaliacoes {
@@ -325,6 +345,39 @@ h2 {
   color: var(--textoforte);
 }
 
+footer {
+  background-color: var(--fundoescuro);
+  color: var(--textoclaro);
+  padding: 2em 1.5em;
+}
+
+footer div.container {
+  max-width: 75em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  font-size: 0.85em;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p.dev {
+  opacity: 0.8;
+}
+
+footer p.dev a {
+  color: var(--dourado);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer p.dev a:hover {
+  opacity: 0.8;
+  background-color: var(--textoclaro);
+  color: var(--fundoescuro);
+}
+
 @media (min-width: 768px) {
   .header-container {
     flex-direction: row;
@@ -389,11 +442,21 @@ h2 {
   
   .beneficios-lista {
     flex-direction: row;
-    justify-content: space-between;
+    gap: 2em;
+    background-color: var(--areaderespiro);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    padding: 30px;
   }
 
   .beneficio {
     flex: 1;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+
+  .beneficio img {
+    width: 3em;
   }
 
   h1 {
@@ -443,5 +506,15 @@ h2 {
     padding: 30px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     border-radius: 12px;
+  }
+
+  footer div.container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  footer p.texto {
+    margin-bottom: 0;
   }
 }
