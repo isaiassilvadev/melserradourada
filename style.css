@@ -11,6 +11,9 @@
   --fundosecundario: #ffd966;
   --areaderespiro: #ffffff;
   --textosecundario: #343a3a;
+  --fundoescuro: #22211d;
+  --textoclaro: #fdf5e6;
+  --dourado: #d4a017;
 }
 
 header {
@@ -88,7 +91,8 @@ h2 {
 }
 
 #hero {
-  background-color: var(--fundosecundario);
+  background: linear-gradient(to right, var(--fundoescuro), var(--textoforte) 80%);
+  color: var(--textoclaro);
   padding: 3em 1.5em;
 
   display: flex;
@@ -104,28 +108,34 @@ h2 {
 
 .hero-texto h1 {
   font-size: 2em;
+  color: var(--dourado);
 }
 
 .hero-texto p {
   max-width: 35em;
   font-size: 1em;
-  color: var(--textosecundario);
 }
 
 .btn-hero {
   align-self: flex-start;
   padding: 0.8em 1.4em;
-  background-color: var(--corprincimpal);
+  background-color: var(--dourado);
   color: var(--textoforte);
   text-decoration: none;
   border-radius: 0.6em;
   font-weight: bold;
 }
 
+.btn-hero:hover {
+  background-color: var(--textoclaro);
+  color: var(--textoforte);
+}
+
 .hero-imagem img {
   width: 100%;
   border-radius: 1em;
   object-fit: cover;
+  box-shadow: 10px 10px 0px #d49e1744;
 }
 
 /* seção */
@@ -206,11 +216,6 @@ h2 {
   font-weight: bold;
 }
 
-.btn-hero:hover {
-  background-color: var(--textoforte);
-  color: var(--fundoprincimpal);
-}
-
 .btn-produto:hover {
   background-color: var(--fundosecundario);
   color: var(--textoforte);
@@ -227,20 +232,23 @@ h2 {
   overflow: hidden;
 }
 
-#provasocial img {
+.testemunho {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  background-color: var(--areaderespiro);
+}
+
+.testemunho img {
   width: 80px;
   height: 80px;
   margin-right: 12px;
   border-radius: 50%;
   object-fit: cover;
   aspect-ratio: 1/1;
-}
-
-.testemunho {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  background-color: var(--areaderespiro);
+  background-color: var(--fundoescuro);
+  border: 3px solid var(--dourado);
+  padding: 3px;
 }
 
 .testemunho p {
@@ -331,25 +339,43 @@ h2 {
   section#hero {
     min-height: 70vh;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 80px 10%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px 10%;
     min-height: 80vh;
     gap: 50px;
   }
 
   .hero-texto {
     flex: 1;
+    text-align: left;
+  }
+
+  .hero-texto h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    max-width: 600px;
+  }
+
+  .hero-texto p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    max-width: 450px;
+    margin-bottom: 30px;
   }
 
   .hero-imagem {
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   .hero-imagem img {
-    max-width: 90%;
-    height: auto;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 20px 20px 0px #d49e1744;
   }
 
   .products {
