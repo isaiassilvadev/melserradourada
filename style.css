@@ -300,8 +300,14 @@ main p {
 }
 
 #formulario {
+  display: flex;
+  flex-direction: column;
   padding: 3em 1.5em;
   background-color: var(--areaderespiro);
+}
+
+.img-box img {
+  display: none;
 }
 
 #formulario h2 {
@@ -503,6 +509,20 @@ footer p.dev a:hover {
   .testemunho > div {
     flex: 1 1 calc(25% - 20px);
     min-width: 250px;
+  }
+
+  #formulario {
+    flex-direction: row;
+    gap: 2em;
+    align-items: center;
+  }
+
+  .img-box img {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgb(0, 0, 0, 0.15);
   }
 
   #formulario h2 {
